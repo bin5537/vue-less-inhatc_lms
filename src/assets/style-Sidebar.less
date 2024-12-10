@@ -1,0 +1,20 @@
+aside {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 10;
+
+    .roundBox(80px, @base-backgroundColor, @base-borderColor);
+
+    >img {
+        width: 80%;
+        height: 80%;
+        object-fit: contain;
+        transition: all 0.2s;
+    }
+
+    &:hover>img {
+        width: 90%;
+        height: 90%;
+    }
+}

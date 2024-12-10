@@ -1,0 +1,180 @@
+#banner {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    // 닫힘 모드
+    &.close .inner {
+        display: flex;
+        flex-direction: row;
+        padding: 25px;
+
+        .content {
+            display: none;
+        }
+
+        >h1 {
+            margin-bottom: 0;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+
+            >span {
+
+                &:first-of-type {
+                    display: none;
+                }
+
+                &:last-of-type {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .arrow {
+            top: 12.5px;
+            right: 12.5px;
+            border-radius: 10px;
+            transform: rotate(-180deg);
+        }
+    }
+
+    // 열림 모드
+    .inner {
+        padding: 80px 40px;
+        background-image: url("../assets/images/banner.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        transition: all 0.1s;
+
+        .innerSize();
+
+        .blur {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(5px);
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            width: 45px;
+            height: 45px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            color: #ffffff;
+            font-size: 20px;
+            z-index: 2;
+            cursor: pointer;
+
+            &:hover {
+                background: rgba(178, 209, 255, 0.2);
+            }
+        }
+
+        >h1 {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            z-index: 2;
+            margin-bottom: 50px;
+            text-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+
+            >span {
+                &:first-of-type {
+                    display: flex;
+                    justify-content: center;
+                    color: #ffffff;
+                    font: bold 18px/1 @font-family;
+                    margin-bottom: 10px;
+                }
+
+                &:last-of-type {
+                    display: flex;
+                    justify-content: center;
+                    color: #ffffff;
+                    font: bold 24px/1 @font-family;
+                }
+            }
+        }
+
+        .content {
+            position: relative;
+            display: flex;
+
+            align-items: center;
+            z-index: 2;
+
+            .tInfo {
+                min-width: 300px;
+                height: 110px;
+                padding: 15px;
+                border-radius: 5px;
+                border: 2px solid rgba(178, 209, 255, 0.4);
+                /* box-shadow: 0 0 3px 0 rgba(92, 157, 255, 0.8); */
+                background: rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(40px);
+            
+                display: flex;
+                align-items: center;
+            
+                color: #ffffff;
+                font: bold 14px/1 @font-family;
+                margin-right: 20px;
+
+                &:last-of-type {
+                    margin-right: 0px;
+                }
+
+                >img {
+                    width: 60px;
+                    height: 60px;
+                    object-fit: contain;
+                }
+
+                >span {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+
+                    >span {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 10px;
+
+                        &:last-of-type {
+                            margin-bottom: 0;
+                        }
+                        
+                        >span {
+                            margin-left: auto;
+
+                            &.btn {
+                                padding: 5px 10px;
+                                background: #22406b;
+                                border-radius: 5px;
+                                cursor: pointer;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
