@@ -2,6 +2,9 @@
 # vue-less-inhatc_lms
 vue와 less를 이용한 인하공업전문대학 이러닝 웹 페이지 커스텀
 <br><br><br>
+## 실행 화면 이미지
+![image](https://github.com/user-attachments/assets/daab899d-9a7f-4c64-9ceb-9961479e2fa6)
+<br><br><br>
 
 ## 주요 사용 명령어
 
